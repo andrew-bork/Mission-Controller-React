@@ -18,13 +18,6 @@ export default function PrimaryFlightDisplay({roll = 0, pitch = 0} : {roll: numb
     let altitude = 0;
     let pitchSetpoint = 100;
     let rollSetpoint = 0;
-    let status = 0;
-    let dt = 1.0;
-    let data = {
-        ax: 0,
-        ay:0,
-        az: -1,
-    };
 
     const pitchTicks = [];
     for(let angle = -36; angle <= 36; angle ++) {
@@ -146,10 +139,10 @@ export default function PrimaryFlightDisplay({roll = 0, pitch = 0} : {roll: numb
             </g>
             
             {/* // Altitude Indicator */}
-            <g>
+            {/* <g>
                 <rect x="65" y="38" width="10" height="4" strokeWidth="0.15" fill="none" stroke="black"></rect>
                 <text stroke="none" x="74" y="40" textAnchor="end" dominantBaseline="central" fontSize="2px">{(altitude).toFixed(2)}</text>
-            </g>
+            </g> */}
         </svg>
     )
 }
